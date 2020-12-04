@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forme</title>
+</head>
+<body>
+    
+    <form action="">
+        <fieldset>
+            <legend>Osnovni podaci</legend>
+
+            <p>
+                <label>Ime:</label>
+                <input type="text" maxlength="20">
+            </p>
+
+            <p>
+                <label>Prezime:</label>
+                <input type="text" value="Peric">
+            </p>
+
+            <p>
+                <label>Korisničko ime:</label>
+                <input type="text" placeholder="Unesite korisničko ime">
+            </p>
+
+            <p>
+                <label>E-mail:</label>
+                <input type="email">
+            </p>
+
+            <p>
+                <label>Lozinka:</label>
+                <input type="password">
+            </p>
+
+            <p>
+                <label>Zanimanje:</label>
+                <input type="search">
+            </p>
+
+            <p>
+                <label>Godine:</label>
+                <input type="number" min="18" max="115" step="1" value="18">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Ostale informacije</legend>
+
+            <p>
+                <label>Datum dostave:</label>
+                <input type="date" min="2020-12-04" max="2020-12-31" step="7">
+            </p>
+
+            <p>
+                <label>Vreme dostave:</label>
+                <input type="time">
+            </p>
+
+            <p>
+                <label>Plaćanje:</label>
+                <input type="radio" name="placanje" value="kes" checked> Keš
+                <input type="radio" name="placanje" value="kartica"> Kartica
+            </p>
+
+            <p>
+                <label>Dodatne usluge:</label>
+                <input type="checkbox" name="usluge" value="povratnica" checked>Povratnica
+                <input type="checkbox" name="usluge" value="priznanica" checked>Priznanica
+                <input type="checkbox" name="usluge" value="faktura">Faktura
+            </p>
+
+            <p>
+                <label>Odaberite boju:</label>
+                <input type="color" value="#5880d1">
+            </p>
+
+            <p>
+                <label>Odaberite fajl za dizajn:</label>
+                <input type="file">
+            </p>
+
+            <p>
+                <label>Odaberite grad:</label>
+                <select name="" id="">
+                    <optgroup label="Južna Srbija">
+                        <option>Niš</option>
+                        <option>Leskovac</option>
+                        <option>Vranje</option>
+                    </optgroup>
+
+                    <optgroup label="Centralna Srbija">
+                        <option>Beograd</option>
+                        <option>Kragujevac</option>
+                    </optgroup>
+                    
+                    <optgroup label="Severna Srbija">
+                        <option>Novi Sad</option>
+                        <option>Subotica</option>
+                    </optgroup>                    
+                </select>
+            </p>
+        </fieldset>
+
+        <input type="button" value="Potvrdi">
+        <input type="reset" value="Resetuj podatke">
+        <input type="submit" value="Pošalji podatke">
+        <button>Dugme</button>
+    </form>
+
+</body>
+</html>
