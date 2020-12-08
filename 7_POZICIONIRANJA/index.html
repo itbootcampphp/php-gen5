@@ -20,6 +20,7 @@
             position: relative;
             left: 60px;
             top: 80px;
+            z-index: 1;
         }
         .news img {
             position: absolute; /* pomeranje u odnosu na roditeljski element koji ima podesenu poziciju */
@@ -33,6 +34,15 @@
             right: 15px;
             margin: 0;
         }
+        footer {
+            background-color: cornflowerblue;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+        * {
+            margin: 0;
+        }
     </style>
 </head>
 <body>
@@ -41,5 +51,8 @@
         <img src="download.jpg" alt="">
         <h5>Rezultati predsednickih izbora</h5>
     </div>
+    <footer>
+        <p>ITBootcamp</p>
+    </footer>
 </body>
 </html>
