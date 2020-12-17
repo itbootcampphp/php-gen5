@@ -32,4 +32,39 @@
     $ukupnoMinuti = $minuti + $sati * 60;
     echo "<br>";
     echo $ukupnoMinuti;
+
+    // Zadatak 6
+    $eur = 50;
+    $srkEur = 117.58;
+    $srkDol = 96.09;
+    /*$dinari = $eur * $srkEur;
+    $dolari = $dinari / $srkDol;*/
+    $dolari = $eur * $srkEur / $srkDol;
+    echo "<br>";
+    echo $dolari;
+
+    // Zadatak 10
+    // 100 : x = (100 - popust) : cena
+    // x = 100 * cena / (100 - popust)
+    $cena = 15000;
+    $popust = 20;
+    $x = 100 * $cena / (100 - $popust);
+    echo "<br>";
+    echo $x;
+
+    // Zadatak 11
+    // Za razlomljene brojeve: floor(...) => donji ceo deo, ceil(...) => gornji ceo deo
+    $n = 14;
+    $neiskorisceno = $n % 3;
+    $brojDana = floor($n / 3); // Isto je i (int) ($n / 3)
+    echo "<br>";
+    echo $neiskorisceno;
+    echo "&nbsp;";
+    echo $brojDana;
+
+    // (int) - operator konverzije
+    echo "<br>";
+    echo (int) 3.8;
+    echo (int) "3.8";
+    echo (int) false;
 ?>
