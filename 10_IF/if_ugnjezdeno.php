@@ -4,57 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ugnježdeno grananje</title>
-
-    <!-- <link rel="stylesheet" href="mojcss.css"> -->
-
-    <style>
-        div{
-            color: red;
-        }
-
-        #slicica{
-            border: 5px pink solid;
-        }
-    </style>
 </head>
 <body>
 
-    <div>
-        Zdravo kako si?
-    </div>
+    <!-- 
+        20. Učitati dva cela broja i ispitati da li je veći od njih paran. 
+     -->
 
-    <div>
-        Učim PHP
-        <?php
-            echo ":)";
-        ?>
-    </div>
+     <?php
+        $br1 = 15;
+        $br2 = 15;
 
-    <p>Ovo je prvi paragraf</p>
-
-
-    <article>
-        Da li je broj 3 paran?
-        <?php
-            $br = 3;
-            if($br % 2 == 0){
-                echo "Broj $br je paran broj!";
+        if($br1 > $br2) {
+            echo "Broj $br1 je veći";
+            if($br1 % 2 == 0) {
+                echo " i paran je";
             }
             else {
-                echo "Broj $br nije paran broj.";
+                echo " i neparan je";
             }
-        ?>
-    </article>
-
-    <?php
-        echo "<img src='slike/f.png' id='slicica'>";
-    ?>
-
-    <?php
-        $boja = "purple";
-        $font = "35px";
-
-        echo "<p style='color: $boja; font-size: $font;'>Neki tekst</p>";
-    ?>
+        } 
+        elseif($br2 > $br1) {
+            echo "Broj $br2 je veći";
+            if($br2 % 2 == 0) {
+                echo " i paran je";
+            }
+            else {
+                echo " i neparan je";
+            }
+        }
+        else {
+            echo "Brojevi $br1 i $br2 su jednaki";
+        }
+     ?>
 </body>
 </html>
