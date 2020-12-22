@@ -206,6 +206,46 @@
         }
         echo "<p>Proizvod brojeva od 2 do 6 je $p</p>";
 
+        // 10. ZADATAK
+        /*
+            Odrediti sumu kvadrata parnih i sumu kubova neparnih brojeva od n do m
+        */
+
+        $sumaKv = 0;
+        $sumaKub = 0;
+        $n = 3;
+        $m = 7;
+
+        while($n <= $m) {
+            if($n % 2 == 0){
+                $sumaKv += $n**2; // ili $sumaKv = $sumaKv + $n*$n
+            }
+            else {
+                $sumaKub += $n**3; // ili $sumaKub = $sumaKub + $n*$n*$n
+            }
+            $n++;
+        }
+        echo "Suma kvadrata je: $sumaKv <br> Suma kubova je: $sumaKub <hr>";
+
+        // 11. ZADATAK
+        /*
+        Odrediti sa koliko brojeva je deljiv uneti broj k
+        */
+
+        $k = 7;
+        $d = 1;
+        $deljiv = 0;
+
+        while($d <= $k) {
+            if($k % $d == 0) {
+                $deljiv++;
+            }
+            $d++;
+        }
+
+        echo "$deljiv <hr>";
+
+
     ?>
     </body>
 </html>
