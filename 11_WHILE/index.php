@@ -245,6 +245,48 @@
 
         echo "$deljiv <hr>";
 
+        // 12. ZADATAK
+        /*
+            Odrediti da li je dati prirodan broj n prost. Broj je prost ako je deljiv samo sa jedan i sa samim sobom
+        */
+        // 1. NAČIN
+        $n = 2;
+        $br = 1;
+        $deljivi = 0;
+        while($br <= $n){
+            if($n % $br == 0){
+                $deljivi++;
+            }            
+            $br++;
+        }
+        
+        if($deljivi == 2){
+            echo "Broj je prost <hr>";
+        }
+        else {
+            echo "Broj nije prost <hr>";
+        }
+
+        // 2. NAČIN
+        $n = 9;
+        $br = 2;
+        $prost = true;
+
+        while($br <= $n/2){
+            if($n % $br == 0){
+                $prost = false;
+                break;
+            }
+            $br++;
+        }
+        if($prost){
+            echo "Broj je prost <hr>";
+        }
+        else {
+            echo "Broj nije prost <hr>";
+        }
+
+
 
     ?>
     </body>
