@@ -65,4 +65,71 @@
     }
     echo "<p>$proizvod</p>";
 
+
+
+    /* RESENJA ZADATAKA 18 - 21 KOJA JE POSTAVIO GORAN: */
+    
+    echo "Zadatak 19: ";
+    $n = -15;
+    $m = 10;
+    $a = -5;
+    if ($a != 0) {
+        echo "Interval od $n do $m. Nisu deljivi sa $a: "; 
+        for ($i = $n; $i <= $m; $i++) {
+            if ($i % $a != 0) {
+                echo "$i, ";
+            }
+        }
+        echo "<br>";
+    } else {
+        echo "Trazi se deljivost sa 0 sto po definiciji nije dozvoljeno.<br>";
+    }
+
+    echo "Zadatak 20: ";
+    $n = -10;
+    $m = 15;
+    $a = 3;
+    $suma1 = 0;
+    $suma2 = 0;
+    if ($a != 0) {
+        echo "Interval od $n do $m: <br>"; 
+        for ($i = $n; $i <= $m; $i++) {
+            echo "$i, ";
+            if ($i % $a != 0) {
+                $suma1 += $i;
+            } else {
+                $suma2 += $i;
+            }
+        }
+        echo "<br>";
+        $suma = $suma1 + $suma2;
+        echo "Suma brojeva $suma<br>";
+        echo "Suma brojeva deljivih sa $a: $suma2<br>";
+        echo "Suma brojeva nedeljivih sa $a: $suma1<br>";
+    } else {
+        echo "Trazi se deljivost sa 0 sto po definiciji nije dozvoljeno.<br>";
+    }
+
+    echo "Zadatak 21: ";
+    $n = -15;
+    $m = 10;
+    $a = -5;
+    $b = 3;
+    $p = 1;
+    if ($a * $b != 0) {
+        echo "Interval od $n do $m. Deljivi sa $a a nisu sa $b: "; 
+        for ($i = $n; $i <= $m; $i++) {
+            if ($i % $a == 0 && $i % $b != 0) {
+                echo "$i, ";
+                $p *= $i;
+            }
+        }
+        if ($p == 1) {
+            echo "Nema brojeva koji zadovoljavaju uslov";
+        } else {
+            echo " a njihov proizvod je: $p<br>";
+        }
+    } else {
+        echo "Trazi se deljivost sa 0 sto po definiciji nije dozvoljeno.<br>";
+    }
 ?>
