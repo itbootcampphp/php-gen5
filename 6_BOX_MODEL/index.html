@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            /*border-style: dashed;
+            border-width: 2px;
+            border-color: black;*/
+            border: 2px dashed black;
+            border-radius: 20%;
+            /*border-left: 3px solid red;*/
+            /*margin-right: 8px;
+            margin-left: 4px;*/
+            margin: 0 8px 0 4px;
+            padding: 4px 8px 1px; /* p-t: 4px b-b: 1px p-r: 8px p-l: 8px */
+            width: 200px;
+            height: 80px;
+            display: inline-block;
+        }
+        p {
+            background-color: coral;
+            width: 400px;
+            height: 35px;
+            padding-top: 10px;
+            border: 2px solid black;
+            margin-bottom: 30px;
+        }
+        span {
+            background-color: brown;
+            display: inline-block;
+            width: 50%;
+            padding: 5px;
+        }
+
+        /*
+            UKUPNA SIRINA = width + padding-left + padding-right + border-left + border-right + margin-left + margin-right
+            UKUPNA VISINA = height + padding-top + padding-bottom + border-top + border-bottom + margin-top + margin-bottom
+        */
+
+        /*
+            BLOCK  (sirina = sirina stranice)
+                div, p, h1, h2, ..., h6, table 
+
+            INLINE (dimenzije = onoliko koliko da se prikaze sadrzaj)
+                    (ta dimenzija NE MOZE da se promeni sa width/height!)
+                span, a, img, td
+
+            INLINE-BLOCK
+                Ovo je INLINE sa mogucnoscu da se postavi width/height
+        */
+    </style>
+</head>
+<body>
+    <p>Tekst prvog paragrafa</p>
+    <p>Tekst drugog paragrafa</p>
+    <a href="http://www.google.com">Google</a>
+    <a href="http://www.facebook.com">Facebook</a>
+
+    <br>
+    <span>Ovo je tekst prvog span elementa</span><span>Ovo je tekst drugog span elementa</span>
+</body>
+</html>

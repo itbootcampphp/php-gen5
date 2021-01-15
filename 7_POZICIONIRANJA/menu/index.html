@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        nav ul {
+            overflow: hidden;
+            list-style-type: none;
+            background-color: brown;
+        }
+        nav ul li {
+            float: left;
+            width: 25%;
+            border: 2px solid white;
+            text-align: center;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 8px;
+        }
+        nav ul li a:hover {
+            background-color: chocolate;
+        }
+        .submenu {
+            position: absolute;
+            background-color: brown;
+            width: 25%;
+            display: none;
+        }
+        .dropdown:hover .submenu {
+            display: block;
+        }
+        body {
+            position: relative;
+            top: 40px;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer ul {
+            background-color: cadetblue;
+            width: 50%;
+        }
+        footer ul li {
+            text-align: center;
+        }
+        footer ul li a {
+            display: block;
+            text-decoration: none;
+            padding: 8px;
+        }
+        footer ul li a:hover {
+            background-color: darkgrey;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Our Mission</a></li>
+            <li><a href="#">Our Ingredients</a></li>
+            <li class="dropdown">
+                <a href="#">Satisfied Customers</a>
+                <div class="submenu">
+                    <a href="#">Pera Peric</a>
+                    <a href="#">Laza Lazic</a>
+                    <a href="#">Mika Mikic</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <footer>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Our Mission</a></li>
+            <li><a href="#">Our Ingredients</a></li>
+            <li><a href="#">Satisfied Customers</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

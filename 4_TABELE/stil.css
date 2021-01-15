@@ -1,0 +1,38 @@
+body {
+  background-color: burlywood;
+}
+
+th {
+  border: 1px red solid;
+}
+
+td {
+  border: 1px black solid;
+  padding: 10px;
+}
+
+#prviRed {
+  color: red;
+}
+
+/* tr:nth-child(2) znači samo 2. red tabele */
+#xyz tr:nth-child(2) {
+  background-color: yellow;
+}
+
+/* tr:nth-child(2n) znači svaki drugi red tabele */
+#xyz tr:nth-child(2n) {
+  color: red;
+}
+
+#xyz tr:nth-child(odd) {
+  font-weight: bold;
+}
+
+#xyz tr:nth-child(even) {
+  font-style: italic;
+}
+
+#xyz tr:nth-child(even):hover {
+  background-color: gray;
+}

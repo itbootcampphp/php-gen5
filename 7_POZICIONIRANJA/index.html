@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1 {
+            background-color: brown;
+            width: 400px;
+            height: 50px;
+            position: relative; /* pomeranje u odnosu na "normalnu" poziciju */
+            top: 30px;
+            left: 60px;
+        }
+        .news {
+            background-color: chocolate;
+            width: 600px;
+            height: 300px;
+            position: relative;
+            left: 60px;
+            top: 80px;
+            z-index: 1;
+        }
+        .news img {
+            position: absolute; /* pomeranje u odnosu na roditeljski element koji ima podesenu poziciju */
+            top: 15px;
+            left: 15px;
+            width: 300px;
+        }
+        .news h5 {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            margin: 0;
+        }
+        footer {
+            background-color: cornflowerblue;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+        * {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">Tekst div 1</div>
+    <div class="news">
+        <img src="download.jpg" alt="">
+        <h5>Rezultati predsednickih izbora</h5>
+    </div>
+    <footer>
+        <p>ITBootcamp</p>
+    </footer>
+</body>
+</html>
