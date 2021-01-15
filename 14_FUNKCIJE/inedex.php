@@ -270,7 +270,7 @@
     /* 
      U jednom gradu je od ponedeljka do petka, tačno u podne, merena temperatura vazduha. Izmerene temperature su zapisane u obliku asocijativnog niza datum/temperatura. Osmisliti funkciju (ili više njih) koja će na ekranu plavom bojom ispisati dan, datum i temperaturu kada je temperatura bila najniža, a crvenom bojom ispisati dan, datum i temperaturu kada je temperatura bila najviša. Testirati implementirani kod.
     */
-    $merenja = array("10.01.2021." => -17, 
+    $merenja = array("10.01.2021." => -37, 
                     "11.01.2021." => -5, 
                     "12.01.2021." => -15, 
                     "13.01.2021." => 3, 
