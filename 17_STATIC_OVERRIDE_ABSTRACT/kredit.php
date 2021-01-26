@@ -6,12 +6,26 @@
         protected $tip;
 
         private static $defaultBrGod;
+        private static $brojKredita = 0;
+
+        public const DEFAULT_OSNOVICA = 1000;
 
         public function __construct($gk, $o, $bg, $t) {
             $this->setGodKamata($gk);
             $this->setOsnovica($o);
             $this->setBrGod($bg);
             $this->setTip($t);
+            self::$brojKredita++;
+            echo "<p style='color: green'>Pozvan je konstruktor za klasu Kredit</p>";
+        }
+
+        public function __destruct() {
+            self::$brojKredita--;
+            echo "<p style='color: red'>Pozvan je destuktor za klasu Kredit</p>";
+        }
+
+        public static function getBrojKredita() {
+            return self::$brojKredita;
         }
 
         public function getGodKamata() {
@@ -47,11 +61,11 @@
         }
 
         public function setOsnovica($o) {
-            if($o > 0) {
+            if($o > self::DEFAULT_OSNOVICA) {
                 $this->osnovica = $o;
             }
             else {
-                $this->osnovica = 0;
+                $this->osnovica = self::DEFAULT_OSNOVICA;
             }
         }
 
