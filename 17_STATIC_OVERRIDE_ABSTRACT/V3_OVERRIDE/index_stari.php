@@ -42,3 +42,39 @@
 
     $bk = Kredit::getBrojKredita();
     echo "<p>Broj kredita pre zavrsetka programa: $bk</p>";
+
+
+    $k6 = new ObicanKredit(20, 1000, 2);
+    //$mr1 = $k6->mesecnaRataObicanKredit();
+    //echo "<p>Mesecna rata za obican kredit je: $mr1</p>";
+
+    $k7 = new AmortizovanKredit(20, 1000, 2);
+    //$mr2 = $k7->mesecnaRataAmortizovanKredit();
+    //echo "<p>Mesecna rata za amortizovan kredit je: $mr2</p>";
+
+
+    // Formiramo niz od svih kredita u programu
+    $krediti = array($k1, $k2, $k4, $k5, $k6, $k7);
+
+    foreach($krediti as $kredit) {
+        /*
+        if($kredit objekat klase ObicanKredit) {
+            $kredit->mesecnaRataObicanKredit();
+        }
+        elseif($kredit objekat klase AmortizovanKredit) {
+            $kredit->mesecnaRataAmortizovanKredit();
+        }
+        elseif($kredit objekat klase Kredit) {
+            // Radi nesto sa ovim objektom ili ga preskoci
+        }
+        */
+
+        /*
+        $mr = $kredit->mesecnaRata();
+        echo "<div>Mesecna rata za kredit: ";
+        $kredit->stampa();
+        echo "iznosi $mr.</div>";
+        */
+
+        $kredit->stampa();
+    }

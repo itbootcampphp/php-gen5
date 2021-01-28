@@ -114,7 +114,15 @@
                     <li>Osnovica: {$this->osnovica}</li>
                     <li>Period otplate: {$this->brGod} god.</li>
                     <li>Tip kredita: {$this->tip}</li>
+                    <li>Mesečna rata: {$this->mesecnaRata()}</li>
                 </ul>
             ";
         }
+
+        public function mesecnaRata() {
+            $kamata = $this->osnovica * $this->brGod * $this->godKamata / 100 * 1.1;
+            $brojMeseci = $this->brGod * 12;
+            return ($this->osnovica + $kamata) / $brojMeseci;
+        }
+
     }
