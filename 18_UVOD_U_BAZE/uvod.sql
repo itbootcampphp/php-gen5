@@ -1,23 +1,23 @@
-#Kreiranje baze
+--Kreiranje baze
 CREATE DATABASE moja_druga_baza;
 
-#Brisanje baze
+-- Brisanje baze
 DROP DATABASE moja_druga_baza;
 
-#BAZA SKOLA
+--BAZA SKOLA
 CREATE DATABASE moja_skola
 CHARACTER SET utf16 COLLATE utf16_slovenian_ci;
 
-#CREIRANJE TABELE studenti
+--CREIRANJE TABELE studenti
 CREATE TABLE studenti(
 	ime VARCHAR(30),
 	prezime VARCHAR(50)
 );
 
-#BAZA SHOP
+--BAZA SHOP
 CREATE DATABASE shop;
 
-#KREIRANJE TABELE customers
+--KREIRANJE TABELE customers
 CREATE TABLE customers(
 	id INT PRIMARY KEY,
 	name VARCHAR(25) NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE customers(
 	salary DECIMAL(18,2) DEFAULT 500
 );
 
-#KREIRANJE TABELE tasks
+--KREIRANJE TABELE tasks
 CREATE TABLE IF NOT EXISTS tasks(
 	task_id INT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS tasks(
 	description TEXT
 );
 
-#DODAVANJE KOLONE U TABELU
+--DODAVANJE KOLONE U TABELU
 ALTER TABLE customers 
 ADD active BOOLEAN;
 
@@ -52,7 +52,7 @@ ADD priority TINYINT DEFAULT 0;
 ALTER TABLE tasks
 MODIFY COLUMN description VARCHAR(255);
 
-#UNOS NOVOG KORISNIKA
+--UNOS NOVOG KORISNIKA
 INSERT INTO customers(id, name, age, address, state, salary, number_of_visits, active)
 VALUES(1, "Ana", 23, "Narodnih heroja 25a", "Srbija", 430, 3, 1);
 
