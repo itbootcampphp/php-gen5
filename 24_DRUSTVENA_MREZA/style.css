@@ -1,0 +1,13 @@
+.error {
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.blue {
+    color: blue;
+}
+
+.green {
+    color: green;
+}
