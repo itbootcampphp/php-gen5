@@ -15,7 +15,7 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
         $retypePassword = $_POST['retypePassword'];
-        
+
         // Name validation
         if(textValidation($name)){
             $validated = false;
@@ -60,29 +60,31 @@
             $retypePasswordErr = passwordValidation($retypePassword);
         }
 
+        // Password == Retype password
         if($password != $retypePassword){
             $validated = false;
-            $retypePasswordErr = "Password and retype password must be same";
+            $retypePasswordErr = "Password and Retype password must be the same";
+        }
+        else {
+            $password = md5($password);
         }
 
         if($validated){
-            $password = md5($password);
             $q = "INSERT INTO `users`(`username`, `pass`) 
-                  VALUES ('$username', '$password');";
+                VALUES ('$username', '$password');";
 
             if($conn->query($q)) {
                 //echo "<p class='success'>Successfully added user in table users</p>";
                 $q = "SELECT `id` 
-                      FROM `users` 
-                      ORDER BY `id` DESC
-                      LIMIT 1";
+                    FROM `users` 
+                    WHERE `username` LIKE '$username'";
 
                 $result = $conn->query($q);
                 $red = $result->fetch_assoc();
                 $id = $red['id'];
 
                 $q = "INSERT INTO `profiles`(`name`, `surname`, `gender`, `dob`, `user_id`) 
-                      VALUES ('$name', '$surname', '$gender', '$dob', '$id')";
+                        VALUES ('$name', '$surname', '$gender', '$dob', '$id')";
 
                 if($conn->query($q)) {
                     //echo "<p class='success'>Successfully added profile in table profiles</p>";
@@ -96,7 +98,9 @@
             }
 
             $name = $surname = $gender = $dob = $username = $password = $retypePassword = "";
+            $nameErr = $surnameErr = $dobErr = $usernameErr = $passwordErr = $retypePasswordErr = "";
         }
+        
     }
 ?>
 
