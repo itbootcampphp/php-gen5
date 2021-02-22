@@ -1,8 +1,8 @@
 <?php
     // Formiranje tabela u bazi
     $servername = "localhost";
-    $username = "admin";
-    $password = "admin123";
+    $username = "root";
+    $password = "";
     $database = "mreza";
 
     $conn = new mysqli($servername, $username, $password, $database);

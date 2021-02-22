@@ -1,13 +1,12 @@
 .error {
-    color: red;
-    font-size: 24px;
-    font-weight: bold;
+  color: red;
 }
 
 .blue {
-    color: blue;
+  color: blue;
 }
 
-.green {
-    color: green;
+.green,
+.success {
+  color: green;
 }
