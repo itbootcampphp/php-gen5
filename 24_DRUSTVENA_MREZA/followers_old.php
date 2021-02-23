@@ -1,7 +1,11 @@
 <?php
     require_once 'header.php';
 
-    $id = 3; // ID 'logovanog' korisnika
+    if(empty($_SESSION['id'])) {
+        header('Location: login.php');
+    }
+    
+    $id = $_SESSION['id']; // ID logovanog korisnika
 
     $sql = "SELECT u.id, u.username, CONCAT(p.name, ' ', p.surname) AS full_name
             FROM users AS u
@@ -23,7 +27,7 @@
             $friendId = $row['id'];
             echo "<a href='follow.php?friend_id=$friendId'>Follow</a>";
             echo "&nbsp;";
-            echo "<a href='#'>Unfollow</a>";
+            echo "<a href='unfollow.php?friend_id=$friendId'>Unfollow</a>";
             echo "</li>";
         }
         echo "</ul>";

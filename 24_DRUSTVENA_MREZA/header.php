@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require_once "connection.php";
 ?>
 
@@ -10,10 +11,10 @@
     <body>
         <ul class='menu'>
             <li>
-                <a href='#'>Home</a>
+                <a href='index.php'>Home</a>
             </li>
             <li>
-                <a href='#'>Friends</a>
+                <a href='followers.php'>Friends</a>
             </li>
             <li>
                 <a href='#'>Change Profile</a>
@@ -22,6 +23,6 @@
                 <a href='#'>Change Password</a>
             </li>
             <li>
-                <a href='#'>Logout</a>
+                <a href='logout.php'>Logout</a>
             </li>
         </ul>
