@@ -1,5 +1,4 @@
 <?php
-
 function textValidation($text){
     if(empty($text)){
         return "Enter value";
