@@ -65,5 +65,26 @@ function passwordValidation($pass){
     }
 }
 
+function oldPassword($id, $password, $conn){
+    $q = "SELECT `pass`
+          FROM `users`
+          WHERE id = $id";
+
+    $result = $conn->query($q);
+    if($result->num_rows) {
+        $red = $result->fetch_assoc();
+        $passwordInDatabase = $red['pass'];
+        if(md5($password) != $passwordInDatabase){
+            return "Wrong password";
+        }
+        {
+            return false;
+        }
+    }
+    else{
+        return false;
+    }
+}
+
 
 ?>

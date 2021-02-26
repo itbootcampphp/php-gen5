@@ -1,6 +1,6 @@
 <?php
     require_once "connection.php";
-    require_once "header.php";
+    //require_once "header.php";
     require_once "validation.php";
 
     $validated = true;
@@ -99,6 +99,14 @@
 
             $name = $surname = $gender = $dob = $username = $password = $retypePassword = "";
             $nameErr = $surnameErr = $dobErr = $usernameErr = $passwordErr = $retypePasswordErr = "";
+
+            // Ulogujemo korisnika
+            session_start();
+            $sql = "SELECT * FROM users WHERE username = '$username'";
+            $result = $conn->query($sql);
+            $row = $result->fetch_assoc();
+            $_SESSION['id'] = $row['id'];
+            header('Location: login.php');
         }
         
     }
@@ -111,6 +119,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <form action="#" method="post">

@@ -54,16 +54,18 @@
 </head>
 <body>
     <form action="" method="POST">
-        <label for="username">Username: </label>
-        <input type="text" name="username" id="username">
-        <span class='error'><?php echo $usernameError ?></span>
+        <p>
+            <label for="username">Username: </label>
+            <input type="text" name="username" id="username">
+            <span class='error'><?php echo $usernameError ?></span>
+        </p>
 
-        <br>
-        <label for="pass">Password: </label>
-        <input type="password" name="pass" id="pass">
-        <span class='error'><?php echo $passError ?></span>
-
-        <br>
+        <p>
+            <label for="pass">Password: </label>
+            <input type="password" name="pass" id="pass">
+            <span class='error'><?php echo $passError ?></span>
+        </p>
+        
         <input type="submit" value="Log in!">
     </form>
 </body>

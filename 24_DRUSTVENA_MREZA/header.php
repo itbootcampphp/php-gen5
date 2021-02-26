@@ -17,10 +17,10 @@
                 <a href='followers.php'>Friends</a>
             </li>
             <li>
-                <a href='#'>Change Profile</a>
+                <a href='changeProfile.php'>Change Profile</a>
             </li>
             <li>
-                <a href='#'>Change Password</a>
+                <a href='changePass.php'>Change Password</a>
             </li>
             <li>
                 <a href='logout.php'>Logout</a>
